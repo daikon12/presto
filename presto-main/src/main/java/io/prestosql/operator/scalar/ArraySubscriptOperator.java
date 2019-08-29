@@ -154,6 +154,7 @@ public class ArraySubscriptOperator
     public static Object objectSubscript(Type elementType, Block array, long index)
     {
         checkIndex(array, index);
+        // when index is greater than array size, return null
         if (array.getPositionCount() < index){
             return null;
         }
