@@ -182,6 +182,7 @@ public class ArraySubscriptOperator
 
     public static void checkIndex(Block array, long index)
     {
+        // when index is greater than array size, not throw PrestoException
         checkArrayIndex(index);
 //        if (index > array.getPositionCount()) {
 //            throw new PrestoException(INVALID_FUNCTION_ARGUMENT, format("Array subscript must be less than or equal to array length: %s > %s", index, array.getPositionCount()));
